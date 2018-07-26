@@ -1,9 +1,6 @@
 package com.ger.datastructures;
 
-import com.ger.datastructures.Sorting.BubbleSort;
-import com.ger.datastructures.Sorting.InsertionSort;
-import com.ger.datastructures.Sorting.SelectionSort;
-import com.ger.datastructures.Sorting.ShellSort;
+import com.ger.datastructures.Sorting.*;
 
 import java.util.Random;
 
@@ -27,7 +24,8 @@ public class Main {
 
         printArray("Original", array);
 
-        ShellSort.Sort(array, array.length/2);
+      //  ShellSort.Sort(array, array.length/2);
+        MergeSort.Sort(array);
 
     }
 }
