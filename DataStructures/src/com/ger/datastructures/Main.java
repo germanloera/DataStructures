@@ -24,8 +24,8 @@ public class Main {
 
         printArray("Original", array);
 
-        //  ShellSort.Sort(array, array.length/2);
-        //  MergeSort.Sort(array);
-        // QuickSort.Sort(array);
+          ShellSort.Sort(array, array.length/2);
+          MergeSort.Sort(array);
+          QuickSort.Sort(array);
     }
 }
