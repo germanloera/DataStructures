@@ -13,6 +13,10 @@ public class Main {
     public  static void p(Object str) {
         System.out.println(str);
     }
+    public  static void p(int value) {
+        System.out.print(value + ", ");
+    }
+
     public static void printArray (String algoritmo, int[] array){
 
         System.out.print(algoritmo + ": ");
