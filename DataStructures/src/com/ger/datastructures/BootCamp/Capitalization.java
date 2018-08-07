@@ -15,6 +15,7 @@ public class Capitalization {
 
     }
 
+    // O(n)
     public static String toUpperCase(String str) {
         StringBuilder result = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {

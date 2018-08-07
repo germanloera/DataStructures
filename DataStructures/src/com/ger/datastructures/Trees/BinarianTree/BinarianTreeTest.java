@@ -31,7 +31,7 @@ public class BinarianTreeTest {
 //       BinarianTreeNode found = tree.find(10, tree.getRoot());
 //        Main.p(found);
 
-//tree.printLeaves(tree.getRoot());
+tree.printLeaves(tree.getRoot());
 
 
 

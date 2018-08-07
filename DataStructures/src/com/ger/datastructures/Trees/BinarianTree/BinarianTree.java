@@ -17,7 +17,7 @@ public class BinarianTree {
 
         insertNewNode(value, root);
 
-        Main.p("");
+
     }
 
     private void insertNewNode(int value, BinarianTreeNode _root){
