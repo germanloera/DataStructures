@@ -23,6 +23,10 @@ public class Anagrams {
             }
 
             for (String key : keys) {
+                if(key.length() != word.length()){
+                    continue;
+                }
+
                 char[] keySorted = key.toCharArray();
                 Arrays.sort(keySorted);
                 boolean equals = Arrays.equals(wordSorted, keySorted);
