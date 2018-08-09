@@ -18,42 +18,67 @@ public class AddTwoNumbers {
 //    Output: 7 -> 0 -> 8
 //    Explanation: 342 + 465 = 807.
 //
+//    https://leetcode.com/problems/add-two-numbers/description/
+//
 
     public static void AddTwoNumbers(LinkedList<Integer> n1, LinkedList<Integer> n2) {
-        Main.p("" + getNumber(n1));
-        Main.p("" + getNumber(n2));
+        long value = getNumber(n1) + getNumber(n2);
+        LinkedList<Integer> result = toList(value);
+        Main.p(result);
     }
 
-    public static int getNumber(LinkedList<Integer> n) {
-        int result = 0;
+    public static long getNumber(LinkedList<Integer> n) {
+        long result = 0;
         int pow = 0;
 
         for (Integer number : n) {
-            result = result + number * (int) Math.pow(10, pow);
-            pow++;
 
+
+            result = result + number * (long) Math.pow(10, pow);
+            pow++;
         }
 
         return result;
     }
 
 
+    public static LinkedList<Integer> toList(long value) {
+
+        LinkedList<Integer> result = new LinkedList<>();
+        while (value != 0) {
+            long number =  (value % 10);
+            result.addLast((int)number);
+            value /= 10;
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
 
-//        LinkedList<Integer> n1 = new LinkedList<>();
+        LinkedList<Integer> n1 = new LinkedList<>();
+        n1.add(9);
 //        n1.add(2);
 //        n1.add(4);
 //        n1.add(3);
-//
-//
-//        LinkedList<Integer> n2 = new LinkedList<>();
-//        n2.add(5);
-//        n2.add(6);
-//        n2.add(4);
-//
-//        AddTwoNumbers(n1, n2);
 
-        Main.p(356  );
+        LinkedList<Integer> n2 = new LinkedList<>();
+        n2.add(1);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+        n2.add(9);
+
+//        n2.add(5);
+//       n2.add(6);
+//        n2.add(4);
+
+
+        AddTwoNumbers(n1, n2);
 
 
     }
