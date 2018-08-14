@@ -179,7 +179,13 @@ public class LongestSubstring {
             }
 
          }
-elements.add(t);
+
+         String mayor = "";
+        for(String m = elements){
+            mayor = m.length() > mayor.length() ? m : mayor;
+        }
+
+elements.add(mayor);
         Main.p("");
 
 
