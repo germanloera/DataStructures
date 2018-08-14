@@ -132,31 +132,55 @@ public class LongestSubstring {
 //        return l.length();
 //
 //    }
+//
+//    public static int lengthOfLongestSubstring(String s) {
+//        String temp = s;
+//        int index = 0;
+//        while (!temp.equals("")){
+//            String c = temp.charAt(index)+"";
+//            String t = temp.substring(index+1);
+//
+//            if(t.contains(c)){
+//                int x = t.indexOf(c);
+//                int
+//
+//            }else{
+//                index++;
+//            }
+//
+//
+//
+//
+//
+//
+//        }
+//
+//
+//
+//
+//
+//    }
+//
 
-    public static int lengthOfLongestSubstring(String s) {
-        String temp = s;
-        int index = 0;
-        while (!temp.equals("")){
-            String c = temp.charAt(index)+"";
-            String t = temp.substring(index+1);
 
-            if(t.contains(c)){
-                int x = t.indexOf(c);
-                int
+    public static void lengthOfLongestSubstring(String s) {
+        List<String> elements = new ArrayList<>();
+        String temp = "";
+        String t = "";
 
+        for(int i = 0; i< s.length(); i++){
+            String c = s.charAt(i)+ "";
+            temp = s.substring(i+1);
+            if(temp.contains(c)){
+                elements.add(t+c);
+                t="";
             }else{
-                index++;
+                t+=c;
             }
 
-
-
-
-
-
-        }
-
-
-
+         }
+elements.add(t);
+        Main.p("");
 
 
     }
@@ -185,18 +209,19 @@ public class LongestSubstring {
     public static void main(String[] args) {
 
         String[] values = {
-//                "abcabcbb",
-//                "bbbbb",
-//                "pwwkew",
-//                "dvdf",
-//                "anviaj",
+                "abcabcbb",
+                "bbbbb",
+                "pwwkew",
+                "dvdf",
+               "anviaj",
                 "cdd",
                 "ckilbkd"};
 
         for (String s : values) {
 
-            Main.p(lengthOfLongestSubstring(s));
-            Main.p("");
+           // Main.p();
+            lengthOfLongestSubstring(s);
+
         }
     }
 
