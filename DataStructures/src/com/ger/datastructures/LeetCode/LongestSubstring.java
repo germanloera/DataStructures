@@ -172,7 +172,17 @@ public class LongestSubstring {
             String c = s.charAt(i)+ "";
             temp = s.substring(i+1);
             if(temp.contains(c)){
+
+
+
+
+
                 elements.add(t+c);
+
+
+
+
+
                 t="";
             }else{
                 t+=c;
@@ -180,17 +190,80 @@ public class LongestSubstring {
 
          }
 
-         String mayor = "";
-        for(String m = elements){
-            mayor = m.length() > mayor.length() ? m : mayor;
+
+
+        elements.add(t);
+
+        String longer = elements.get(0);
+
+        for(int i =1; i< elements.size(); i++){
+            
+
         }
 
-elements.add(mayor);
+
+
+
+
+
+//
+//        List<String> elements2 = new ArrayList<>();
+//        String [] elementsArray =  new String[elements.toArray().length];
+//        elements.toArray(elementsArray);
+//
+//        for(int i = 0 ; i < elementsArray.length; i++){
+//
+//
+//
+//        }
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+//         String mayor = "";
+//        for(String m : elements){
+//            mayor = m.length() > mayor.length() ? m : mayor;
+//        }
+//
+//elements.add(mayor);
         Main.p("");
 
 
     }
 
+
+
+
+
+    public static String contains(String a , String b){
+        char[] ca= a.toCharArray();
+        boolean append = true;
+        for(char c: ca){
+            if(b.contains(c+"")){
+                append = false;
+            }
+        }
+        if(append ){
+            return a+b;
+
+        }else{
+
+            return b;
+        }
+
+
+
+    }
 
     public static List<Character> getLonger(List<Character> elements, List<Character> dummy) {
 
