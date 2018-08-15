@@ -34,7 +34,8 @@ public class JewelsandStones {
 //    The characters in J are distinct.
 
 
-//    public static  int numJewelsInStones(String J, String S) {
+//   20 ms
+// public static  int numJewelsInStones(String J, String S) {
 //        StringBuilder b= new StringBuilder();
 //        for(int i = 0; i < J.length(); i++){
 //            char c = J.charAt(i);
@@ -58,7 +59,7 @@ public class JewelsandStones {
 //    }
 
 
-//
+//12 ms
 //    public static  int numJewelsInStones(String J, String S) {
 //        int count = 0;
 //
@@ -71,15 +72,11 @@ public class JewelsandStones {
 //    }
 
 
-
+//11 ms
     public static  int numJewelsInStones(String J, String S) {
-//        int count = 0;
-//
-//        for(int i = 0; i< S.length(); i++){
-//            count += J.contains(S.charAt(i)+"") ? 1 : 0 ;
-//        }
-//
-//        return count;
+
+
+
         return count(J, S, 0);
 
     }
@@ -91,8 +88,7 @@ public class JewelsandStones {
         int c = J.contains(S.charAt(i)+"") ? 1 : 0 ;
         return c + count(J, S, i+1);
 
-
-    }
+ }
 
 
 
