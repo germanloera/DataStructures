@@ -27,7 +27,6 @@ public class HammingDistance {
 //    The above arrows point to positions where the corresponding bits are different.
 
 
-
 //    149/149 test cases passed.
 //            Status:Accepted
 //    Runtime:10 ms
@@ -41,22 +40,27 @@ public class HammingDistance {
 //    }
 
 
+//    149 / 149 test cases passed.
+//            Status: Accepted
+//    Runtime: 6 ms
     public static int hammingDistance(int x, int y) {
-        int z = x ^ y ;
-int count = 0;
-        String binary = Integer.toBinaryString(z);
-       for(int i = 0; i < binary.length(); i++){
-          count += binary.charAt(i) - '0';
-       }
+        int mayor = x > y ? x : y;
+        int menor = x < y ? x : y;
+        int z = mayor ^ menor;
+        int count = 0;
 
+        while (z > 0) {
+            int b = ((z >> 0) & 1);
+            z = (z >> 1);
+            count += b > 0 ? 1 : 0;
 
-
+        }
         return count;
     }
 
     public static void main(String[] args) {
 
-        Main.p(hammingDistance(93, 73));//"Germán Raúl Loera Velasco"));
+        Main.p(hammingDistance(1, 4));//"Germán Raúl Loera Velasco"));
 
     }
 }
