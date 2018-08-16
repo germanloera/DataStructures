@@ -1,5 +1,7 @@
 package com.ger.datastructures.LeetCode;
 
+import com.ger.datastructures.Main;
+
 public class FlipImage {
 
 //
@@ -36,5 +38,53 @@ public class FlipImage {
 
 
 
-    
+
+
+    public static int[][] flipAndInvertImage(int[][] A) {
+
+        for(int i = 0 ; i< A.length; i++){
+            A[i] = flip(A[i], 0);
+        }
+
+        return  A;
+    }
+
+    public static int[] flip(int[] A, int i){
+        if(i >= (A.length/2) + (A.length % 2)){
+            return A;
+        }
+        int j = A.length - i -1;
+        int ai = A[i] > 0? 0: 1;
+        int aj = A[j] > 0? 0: 1;
+        A[i] = aj;
+        A[j] = ai;
+        i++;
+        return flip(A, i);
+
+    }
+
+
+
+
+
+    public static void main(String [] args){
+        int[][] A =
+                {
+                        {1,1,0,0},
+                        {1,0,0,1},
+                        {0,1,1,1},
+                        {1,0,1,0}
+
+//                        {1,1,0},
+//                        {1,0,1},
+//                        {0,0,0}
+                };
+
+        Main.p("");
+        int[][] a= flipAndInvertImage(A);
+        Main.p(a);
+
+    }
+
+
 }
