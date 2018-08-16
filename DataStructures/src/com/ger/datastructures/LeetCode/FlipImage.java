@@ -39,7 +39,12 @@ public class FlipImage {
 
 
 
+//    82 / 82 test cases passed.
+//            Status: Accepted
+//    Runtime: 4 ms
 
+
+    //O (log n)
     public static int[][] flipAndInvertImage(int[][] A) {
 
         for(int i = 0 ; i< A.length; i++){
