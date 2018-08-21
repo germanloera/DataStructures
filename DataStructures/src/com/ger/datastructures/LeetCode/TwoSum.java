@@ -17,37 +17,39 @@ public class TwoSum {
     // https://leetcode.com/problems/two-sum/description/
 
 
-// O (n log n)
+    // O (n log n)
     public static int[] twoSum(int[] nums, int target) {
-int[] positions = new int[2];
+        int[] positions = new int[2];
 
-for(int i = 0; i < nums.length; i++){
-int val =  target - nums[i];
+        for (int i = 0; i < nums.length; i++) {
+            int val = target - nums[i];
 
-    for(int j = i+1; j < nums.length; j++){
+            for (int j = i + 1; j < nums.length; j++) {
 
-        if(val == nums[j] ) {
-positions[0] = i;
-positions[1] = j;
-            return positions;
+                if (val == nums[j]) {
+                    positions[0] = i;
+                    positions[1] = j;
+                    return positions;
+                }
+
+            }
+
+
         }
 
+        Main.p("Not found");
+
+        return null;
     }
 
 
-
-}
-
-Main.p("Not found");
-
-return null;
-    }
-
-
-
-    public static void main(String[] args){
-       int[] nums = {3,2,4};
-        Main.p(twoSum(nums, 6));
+    public static void main(String[] args) {
+        int[] nums = {3, 2, 4};
+        int[] result = twoSum(nums, 6);
+        
+        for(int n : result) {
+            Main.p(n);
+        }
 
     }
 
